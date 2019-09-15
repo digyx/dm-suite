@@ -1,0 +1,91 @@
+<!--
+
+TODO List:
+  - Document Everything...
+
+Bugs:
+  - NONE!!!
+ 
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Dungeon Master Suite - Home</title>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <script src="js/functions.js">
+    </script>
+  </head>
+  <body>
+    <div id="main-window">
+
+      <!-- Navigation Sidebar -->
+      <div class="fixed">
+        <div id="navigation">
+          <h1 class="nav" onclick="openHtmlFile('home.html');">Home</h1>
+          <h1 class="nav" onclick="openHtmlFile('story.html');">Story</h1>
+          <h1 class="nav" onclick="openHtmlFile('events.html');">Events</h1>
+          <h1 class="nav" onclick="openHtmlFile('locations.html');">Locations</h1>
+          <h1 class="nav" onclick="openHtmlFile('npc.html');">NPCs</h1>
+          <h1 class="nav" onclick="openHtmlFile('dice.html');">Dice Roller</h1>
+          <h1></h1>
+          <h1 class="nav" onclick="openHtmlFile('players.html');">Players</h1>
+        </div>
+      </div>
+
+      <!-- Primary Content -->
+      <div id="body">
+        <div id="content">
+
+        </div>
+
+        <!-- Player Stat Overview -->
+        <div id="player-overview">
+          <div class="player-stats" id="player-1">
+            CharacterName<br>
+            HP:000 AC:00<br>
+            S:00 D:00 C:00<br>
+            W:00 I:00 C:00
+          </div>
+          <div class="player-stats" id="player-2">
+            CharacterName<br>
+            HP:000 AC:00<br>
+            S:00 D:00 C:00<br>
+            W:00 I:00 C:00
+          </div>
+          <div class="player-stats" id="player-3">
+            CharacterName<br>
+            HP:000 AC:00<br>
+            S:00 D:00 C:00<br>
+            W:00 I:00 C:00
+          </div>
+          <div class="player-stats" id="player-4">
+            CharacterName<br>
+            HP:000 AC:00<br>
+            S:00 D:00 C:00<br>
+            W:00 I:00 C:00
+          </div>
+          <div class="player-stats" id="player-5">
+            CharacterName<br>
+            HP:000 AC:00<br>
+            S:00 D:00 C:00<br>
+            W:00 I:00 C:00
+          </div>
+          <div class="player-stats" id="player-6">
+            CharacterName<br>
+            HP:000 AC:00<br>
+            S:00 D:00 C:00<br>
+            W:00 I:00 C:00
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+openHtmlFile('home.html');
+contextMenu();
+updatePlayers();
+</script>
