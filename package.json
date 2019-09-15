@@ -7,7 +7,7 @@
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/digyx/dm-suite-desktop",
+  "repository": "https://github.com/digyx/dm-suite",
   "author": "Devon Tingley",
   "license": "CC0-1.0",
   "devDependencies": {
