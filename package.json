@@ -10,11 +10,6 @@
   "repository": "https://github.com/digyx/dm-suite-desktop",
   "author": "Devon Tingley",
   "license": "CC0-1.0",
-  "dependencies": {
-    "electron": "^3.0.4",
-    "electron-packager": "^13.1.0",
-    "electron-reload": "^1.4.0"
-  },
   "devDependencies": {
     "electron": "^3.0.4",
     "electron-packager": "^13.1.0",
