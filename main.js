@@ -20,8 +20,16 @@ function createWindow () {
             if(err) throw err;
         });
     }
+    
     // Create the browser window.
-    mainWindow = new BrowserWindow({width: 1600, height: 900});
+    mainWindow = new BrowserWindow(
+        {
+            width: 1600, 
+            height: 900,
+            webPreferences: {
+                nodeIntegration: true,
+            }
+        });
 
     // and load the index.html of the app.
     mainWindow.loadFile('resources/index.html');

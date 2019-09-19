@@ -457,7 +457,7 @@ function loadPlayers() {
 
     // Read the JSON file and inject the data in the right places
     fs.readFile(playerPath, (err, data) => {
-        if (err) alert(err);
+        if (err) console.log(err);
 
         // Convert the JSON to an Object
         const playerData = JSON.parse(data);
@@ -481,7 +481,7 @@ function loadPlayers() {
 function loadPlayerData() {
     const playerPath = configDir + '/players.json';
     fs.readFile(playerPath, (err, data) => {
-        if (err) alert(err);
+        if (err) console.log(err);
 
         const playerData = JSON.parse(data);
 
