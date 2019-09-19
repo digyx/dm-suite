@@ -42,7 +42,7 @@ function openHtmlFile(newWindow) {
             loadNPCs();
             break;
         case 'players.html':
-            loadPlayers();
+            loadPlayerData();
             break;
         }
     });
@@ -473,6 +473,28 @@ function loadPlayers() {
             
             // Inject the HTML to the DOM
             document.getElementById(key).innerHTML = playerHTML;
+        }
+    });
+}
+
+// Load player data into player editor
+function loadPlayerData() {
+    const playerPath = configDir + '/players.json';
+    fs.readFile(playerPath, (err, data) => {
+        if (err) alert(err);
+
+        const playerData = JSON.parse(data);
+
+        for (let i = 1; i < 7; i++) {
+            document.getElementById(`player${i}-name`).value = playerData[`player-${i}`].charName;
+            document.getElementById(`player${i}-hp`).value = playerData[`player-${i}`].hp;
+            document.getElementById(`player${i}-ac`).value = playerData[`player-${i}`].ac;
+            document.getElementById(`player${i}-str`).value = playerData[`player-${i}`].str;
+            document.getElementById(`player${i}-dex`).value = playerData[`player-${i}`].dex;
+            document.getElementById(`player${i}-con`).value = playerData[`player-${i}`].con;
+            document.getElementById(`player${i}-int`).value = playerData[`player-${i}`].int;
+            document.getElementById(`player${i}-wis`).value = playerData[`player-${i}`].wis;
+            document.getElementById(`player${i}-cha`).value = playerData[`player-${i}`].cha;
         }
     });
 }
