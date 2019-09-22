@@ -1,7 +1,7 @@
 {
   "name": "dm-suite",
   "productName": "Dungeon Master Suite",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "A Dungeon Master Suite",
   "main": "main.js",
   "scripts": {
