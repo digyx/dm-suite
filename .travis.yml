@@ -6,7 +6,5 @@ os:
   - windows
   - linux
 
-deploy:
-  provider: releases
-  file: "dist/*"
-  draft: true
+env:
+  - YARN_GPG=no
