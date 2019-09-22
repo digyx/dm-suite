@@ -1,14 +1,12 @@
 /*  eslint-disable no-unused-vars */
 const electron = require('electron');
 const {app, BrowserWindow} = electron;
+const {autoUpdater} = require('electron-updater');
 const fs = require('fs');
 const configDir = app.getPath('appData') + '/DMS';
 
 if (!app.isPackaged) {
     require('electron-reload')(__dirname);
-} else {
-    const {autoUpdater} = require('electron-updater');
-    autoUpdater.checkForUpdatesAndNotify();
 }
 
 let mainWindow;
@@ -47,6 +45,9 @@ function createWindow () {
 
 app.on('ready', function(){
     createWindow();
+    if (app.isPackaged) {
+        autoUpdater.checkForUpdatesAndNotify();
+    }
 });
 
 // Quit when all windows are closed.
