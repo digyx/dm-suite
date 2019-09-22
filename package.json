@@ -6,7 +6,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "test": "electron-builder -wl",
+    "test": "electron-builder",
     "pack": "electron-builder -wl --dir",
     "dist": "electron-builder -wl -p onTag",
     "release": "build"
