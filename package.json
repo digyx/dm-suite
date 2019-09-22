@@ -8,7 +8,7 @@
     "start": "electron .",
     "test": "electron-builder",
     "pack": "electron-builder -wl --dir",
-    "dist": "electron-builder -wl -p onTag",
+    "dist": "electron-builder -wl",
     "release": "build"
   },
   "build": {
