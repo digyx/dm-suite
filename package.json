@@ -1,13 +1,14 @@
 {
   "name": "dm-suite",
   "productName": "Dungeon Master Suite",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A Dungeon Master Suite",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
+    "test": "electron-builder -wl",
     "pack": "electron-builder -wl --dir",
-    "dist": "electron-builder -wl",
+    "dist": "electron-builder -wl -p onTag",
     "release": "build"
   },
   "build": {
@@ -20,10 +21,14 @@
       "oneClick": "false"
     },
     "linux": {
-      "target": "AppImage"
+      "target": "AppImage",
+      "publish": ["github"]
     }
   },
-  "repository": "https://github.com/digyx/dm-suite",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digyx/dm-suite"
+  },
   "author": "Devon Tingley",
   "license": "CC0-1.0",
   "devDependencies": {
