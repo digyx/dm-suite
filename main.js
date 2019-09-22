@@ -6,6 +6,9 @@ const configDir = app.getPath('appData') + '/DMS';
 
 if (!app.isPackaged) {
     require('electron-reload')(__dirname);
+} else {
+    const {autoUpdater} = require('electron-updater');
+    autoUpdater.checkForUpdatesAndNotify();
 }
 
 let mainWindow;
@@ -33,6 +36,8 @@ function createWindow () {
 
     // and load the index.html of the app.
     mainWindow.loadFile('resources/index.html');
+
+    mainWindow.setMenu(null);
 
     // Emitted when the window is closed.
     mainWindow.on('closed', function () {

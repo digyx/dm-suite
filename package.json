@@ -1,20 +1,39 @@
 {
-  "name": "dm-suite-desktop",
+  "name": "dm-suite",
   "productName": "Dungeon Master Suite",
-  "version": "1.0.0",
-  "description": "A Dungeon Master Suite for Bradley Peters",
+  "version": "1.0.4",
+  "description": "A Dungeon Master Suite",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder -wl --dir",
+    "dist": "electron-builder -wl",
+    "release": "build"
+  },
+  "build": {
+    "appId": "io.twilit.dms",
+    "win": {
+      "target": "nsis",
+      "publish": ["github"]
+    },
+    "nsis": {
+      "oneClick": "false"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
   },
   "repository": "https://github.com/digyx/dm-suite",
   "author": "Devon Tingley",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^6.0.10",
-    "electron-packager": "^13.1.0",
+    "electron-builder": "^21.2.0",
     "electron-reload": "^1.4.0",
     "eslint": "^5.11.0",
     "eslint-config-google": "^0.11.0"
+  },
+  "dependencies": {
+    "electron-updater": "^4.1.2"
   }
 }

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /*  eslint-disable no-unused-vars */
 
 const fs = require('fs');
@@ -9,7 +10,7 @@ const resourceDir = determineResourceDir();
 // If app is packaged, the resource folder is in a different location
 function determineResourceDir() {
     if (app.isPackaged) {
-        return './resources/app/resources/';
+        return './resources/app.asar/resources/';
     } else {
         return './resources/';
     }
